@@ -1,0 +1,136 @@
+:root{
+    --primary-color: #000;
+    --secondary-color:#fff;
+}
+.darkMode{
+    --primary-color: #fff;
+    --secondary-color:#000;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+    font-size: 62.5%; 
+    transition: all 0.5s ease-in;
+}
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Rubik',"Arial", sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.container{
+    width: 100%;
+    max-width: 1240px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toggle{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 0.8rem 1.2rem;
+    position: absolute;
+    top: 5rem;
+}
+.toggle:focus{
+    outline: none;
+}
+.clock-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.clock{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    
+}
+.strelka{
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 6.5rem;
+    width: 3px;
+    transform-origin: bottom center;
+}
+.strelka.hour{
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+.strelka.minutes{
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.strelka.second{
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    background-color: red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.center-point{
+background-color:red;
+width: 1rem;
+height: 1rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+}
+.center-point::after{
+content: '';
+background-color: var(--primary-color);
+width:0.5rem;
+height: 0.5rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+}
+.time{
+    font-size: 6rem;
+}
+.date{
+    color:#aaa;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.date .circle{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    height: 1.8rem;
+    width: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.8rem;
+    transition: all 0.5s ease-in;
+    font-size: 1.2rem;
+}
